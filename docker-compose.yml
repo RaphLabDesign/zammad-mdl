@@ -110,9 +110,6 @@ services:
     command: ["zammad-websocket"]
 
 volumes:
-  zammad-elasticsearch:
-    external:
-      name: zammad-elasticsearch
   zammad-postgresql:
     external:
       name: zammad-postgresql

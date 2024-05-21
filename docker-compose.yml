@@ -56,7 +56,7 @@ services:
     volumes:
       - zammad-backup:/var/tmp/zammad
       - zammad-storage:/opt/zammad/storage:ro
-      - ./scripts/backup.sh:/usr/local/bin/backup.sh:ro
+      - ./scripts/backup.sh:/usr/local/bin/backup.sh
 
   zammad-init:
     <<: *zammad-service

@@ -4,13 +4,11 @@ version: '3.8'
 x-shared:
   zammad-service: &zammad-service
     environment: &zammad-environment
-      MEMCACHE_SERVERS: ${MEMCACHE_SERVERS}
       POSTGRESQL_DB: ${POSTGRES_DB}
       POSTGRESQL_HOST: ${POSTGRES_HOST}
       POSTGRESQL_USER: ${POSTGRES_USER}
       POSTGRESQL_PASS: ${POSTGRES_PASS}
       POSTGRESQL_PORT: ${POSTGRES_PORT}
-      REDIS_URL: ${REDIS_URL}
       # Allow passing in these variables via .env:
       AUTOWIZARD_JSON:
       AUTOWIZARD_RELATIVE_PATH:

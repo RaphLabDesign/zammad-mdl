@@ -58,12 +58,6 @@ services:
       - zammad-storage:/opt/zammad/storage:ro
       - zammad-backup-script:/usr/local/bin/backup.sh:ro
 
-  zammad-elasticsearch:
-    image: bitnami/elasticsearch:${ELASTICSEARCH_VERSION}
-    restart: ${RESTART}
-    volumes:
-      - zammad-elasticsearch:/bitnami/elasticsearch/data
-
   zammad-init:
     <<: *zammad-service
     command: ["zammad-init"]
